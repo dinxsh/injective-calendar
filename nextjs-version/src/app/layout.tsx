@@ -6,8 +6,17 @@ import { SidebarConfigProvider } from "@/contexts/sidebar-context";
 import { inter } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Shadcn Dashboard",
-  description: "A dashboard built with Next.js and shadcn/ui",
+  title: "events calendar micro-site for ninjaHQ & injective 📆",
+  description: "events calendar micro-site for ninjaHQ & injective 📆",
+  openGraph: {
+    title: "events calendar micro-site for ninjaHQ & injective 📆",
+    description: "events calendar micro-site for ninjaHQ & injective 📆",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "events calendar micro-site for ninjaHQ & injective 📆",
+    description: "events calendar micro-site for ninjaHQ & injective 📆",
+  },
 };
 
 export default function RootLayout({

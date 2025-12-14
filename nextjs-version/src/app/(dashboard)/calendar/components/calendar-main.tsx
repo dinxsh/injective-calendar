@@ -51,11 +51,14 @@ interface CalendarMainProps {
 
 export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, onEventClick }: CalendarMainProps) {
   // Convert JSON events to CalendarEvent objects with proper Date objects, fallback to imported data
-  const sampleEvents: CalendarEvent[] = events || eventsData.map(event => ({
+  function isObjectEvent(event: any): event is Record<string, any> {
+    return event && typeof event === 'object' && !Array.isArray(event);
+  }
+  const sampleEvents: CalendarEvent[] = events || eventsData.filter(isObjectEvent).map(event => ({
     ...event,
     date: new Date(event.date),
     type: event.type as "meeting" | "event" | "personal" | "task" | "reminder"
-  }))
+  }));
 
   const [currentDate, setCurrentDate] = useState(selectedDate || new Date())
   const [viewMode, setViewMode] = useState<"month" | "week" | "day" | "list">("month")

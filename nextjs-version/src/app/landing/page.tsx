@@ -3,18 +3,18 @@ import { LandingPageContent } from './landing-page-content'
 
 // Metadata for the landing page
 export const metadata: Metadata = {
-  title: 'ShadcnStore - Modern Admin Dashboard Template',
-  description: 'A beautiful and comprehensive admin dashboard template built with React, Next.js, TypeScript, and shadcn/ui. Perfect for building modern web applications.',
-  keywords: ['admin dashboard', 'react', 'nextjs', 'typescript', 'shadcn/ui', 'tailwind css'],
+  title: 'events calendar micro-site for ninjaHQ & injective 📆',
+  description: 'events calendar micro-site for ninjaHQ & injective 📆',
+  keywords: ['events', 'calendar', 'ninjaHQ', 'injective', 'micro-site', 'web3', 'community'],
   openGraph: {
-    title: 'ShadcnStore - Modern Admin Dashboard Template',
-    description: 'A beautiful and comprehensive admin dashboard template built with React, Next.js, TypeScript, and shadcn/ui.',
+    title: 'events calendar micro-site for ninjaHQ & injective 📆',
+    description: 'events calendar micro-site for ninjaHQ & injective 📆',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ShadcnStore - Modern Admin Dashboard Template',
-    description: 'A beautiful and comprehensive admin dashboard template built with React, Next.js, TypeScript, and shadcn/ui.',
+    title: 'events calendar micro-site for ninjaHQ & injective 📆',
+    description: 'events calendar micro-site for ninjaHQ & injective 📆',
   },
 }
 
