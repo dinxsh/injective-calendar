@@ -330,14 +330,7 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
                   {selectedEvent.type}
                 </Badge>
               </div>
-              <div className="flex gap-2 pt-4">
-                <Button variant="outline" className="flex-1 cursor-pointer" onClick={() => {
-                  setShowEventDialog(false)
-                }}>Edit</Button>
-                <Button variant="destructive" className="flex-1 cursor-pointer" onClick={() => {
-                  setShowEventDialog(false)
-                }}>Delete</Button>
-              </div>
+              {/* Edit/Delete buttons removed for view-only mode */}
             </div>
           )}
         </DialogContent>

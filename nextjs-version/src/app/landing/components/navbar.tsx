@@ -26,7 +26,7 @@ import {
 } from '@/components/ui/collapsible'
 import { Logo } from '@/components/logo'
 import { MegaMenu } from '@/components/landing/mega-menu'
-import { ModeToggle } from '@/components/mode-toggle'
+// import { ModeToggle } from '@/components/mode-toggle'
 import { useTheme } from '@/hooks/use-theme'
 
 const navigationItems = [
@@ -125,7 +125,7 @@ export function LandingNavbar() {
 
         {/* Desktop CTA */}
         <div className="hidden xl:flex items-center space-x-2">
-          <ModeToggle variant="ghost" />
+          {/* <ModeToggle variant="ghost" /> removed */}
           <Button variant="ghost" size="icon" asChild className="cursor-pointer">
             <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
               <Github className="h-5 w-5" />

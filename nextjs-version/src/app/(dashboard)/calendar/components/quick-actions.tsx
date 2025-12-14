@@ -54,70 +54,7 @@ export function QuickActions({
         </CardContent>
       </Card>
 
-      {/* Quick Actions */}
-      <Card>
-        <CardHeader className="pb-3">
-          <CardTitle className="text-sm font-medium">Quick Actions</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <Button 
-            variant="outline" 
-            className="w-full justify-start cursor-pointer" 
-            onClick={onNewEvent}
-          >
-            <Plus className="w-4 h-4 mr-2" />
-            New Event
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            className="w-full justify-start cursor-pointer" 
-            onClick={onNewMeeting}
-          >
-            <Users className="w-4 h-4 mr-2" />
-            Schedule Meeting
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            className="w-full justify-start cursor-pointer" 
-            onClick={onNewReminder}
-          >
-            <Bell className="w-4 h-4 mr-2" />
-            Set Reminder
-          </Button>
-
-          <Separator className="my-3" />
-
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="w-full justify-start cursor-pointer" 
-          >
-            <Share className="w-4 h-4 mr-2" />
-            Share Calendar
-          </Button>
-          
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="w-full justify-start cursor-pointer" 
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Export
-          </Button>
-          
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="w-full justify-start cursor-pointer" 
-            onClick={onSettings}
-          >
-            <Settings className="w-4 h-4 mr-2" />
-            Settings
-          </Button>
-        </CardContent>
-      </Card>
+      {/* Quick Actions removed for view-only mode */}
 
       {/* Upcoming Events */}
       <Card>
