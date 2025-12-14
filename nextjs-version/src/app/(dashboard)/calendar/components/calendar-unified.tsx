@@ -39,8 +39,11 @@ import { cn } from "@/lib/utils"
 import { type CalendarEvent } from "../types"
 
 // Import data
-import eventsData from "../data/events.json"
+import eventsDataRaw from "../data/events.json"
 import calendarsData from "../data/calendars.json"
+
+// Ensure eventsData is typed as CalendarEvent[] (with date as string)
+const eventsData = eventsDataRaw as Array<Omit<CalendarEvent, "date" | "type"> & { date: string; type: string }>
 
 interface CalendarMainProps {
   eventDates?: Array<{ date: Date; count: number }>

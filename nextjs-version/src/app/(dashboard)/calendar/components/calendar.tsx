@@ -25,7 +25,6 @@ export function Calendar({ events, eventDates }: CalendarProps) {
               selectedDate={calendar.selectedDate}
               onDateSelect={calendar.handleDateSelect}
               onNewCalendar={calendar.handleNewCalendar}
-              onNewEvent={calendar.handleNewEvent}
               events={eventDates}
               className="h-full"
             />
@@ -56,7 +55,6 @@ export function Calendar({ events, eventDates }: CalendarProps) {
               selectedDate={calendar.selectedDate}
               onDateSelect={calendar.handleDateSelect}
               onNewCalendar={calendar.handleNewCalendar}
-              onNewEvent={calendar.handleNewEvent}
               events={eventDates}
               className="h-full"
             />

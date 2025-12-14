@@ -50,15 +50,23 @@ interface CalendarMainProps {
 }
 
 export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, onEventClick }: CalendarMainProps) {
-  // Convert JSON events to CalendarEvent objects with proper Date objects, fallback to imported data
-  function isObjectEvent(event: any): event is Record<string, any> {
-    return event && typeof event === 'object' && !Array.isArray(event);
-  }
-  const sampleEvents: CalendarEvent[] = events || eventsData.filter(isObjectEvent).map(event => ({
-    ...event,
-    date: new Date(event.date),
-    type: event.type as "meeting" | "event" | "personal" | "task" | "reminder"
-  }));
+  const sampleEvents: CalendarEvent[] = events || eventsData
+    .filter(event => event && typeof event === 'object' && !Array.isArray(event))
+    .map(event => {
+      const e = event as Record<string, unknown>;
+      return {
+        id: e.id as number,
+        title: e.title as string,
+        date: new Date(e.date as string),
+        time: e.time as string,
+        duration: e.duration as string,
+        location: e.location as string,
+        attendees: e.attendees as string[],
+        type: e.type as "meeting" | "event" | "personal" | "task" | "reminder",
+        color: e.color as string,
+        description: e.description as string
+      };
+    });
 
   const [currentDate, setCurrentDate] = useState(selectedDate || new Date())
   const [viewMode, setViewMode] = useState<"month" | "week" | "day" | "list">("month")

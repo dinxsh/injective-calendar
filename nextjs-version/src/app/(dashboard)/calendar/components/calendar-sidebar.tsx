@@ -11,7 +11,6 @@ interface CalendarSidebarProps {
   selectedDate?: Date
   onDateSelect?: (date: Date) => void
   onNewCalendar?: () => void
-  onNewEvent?: () => void
   events?: Array<{ date: Date; count: number }>
   className?: string
 }
@@ -20,7 +19,6 @@ export function CalendarSidebar({
   selectedDate,
   onDateSelect,
   onNewCalendar,
-  onNewEvent,
   events = [],
   className 
 }: CalendarSidebarProps) {
