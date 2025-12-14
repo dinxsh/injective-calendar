@@ -1,2 +1,1 @@
 ### Injective + NinjaHQ Event Calendar
-
